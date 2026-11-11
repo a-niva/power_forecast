@@ -1,0 +1,88 @@
+{
+  "version": "20261111_1858",
+  "trained_at": "2026-11-11T18:58:47+00:00",
+  "train_start": "2020-01-01 00:00:00+00:00",
+  "train_end": "2024-12-31 23:00:00+00:00",
+  "features": {
+    "FR_load_actual": [
+      "hour",
+      "weekday",
+      "doy_sin",
+      "doy_cos",
+      "is_holiday",
+      "is_xmas",
+      "is_august",
+      "post_crisis",
+      "temp",
+      "temp_24h",
+      "temp_72h",
+      "ssrd_mean",
+      "tcc_mean"
+    ],
+    "FR_solar_actual": [
+      "tiles",
+      "sun_elev",
+      "doy_sin",
+      "doy_cos",
+      "ssrd_mean",
+      "ssrd_q25",
+      "ssrd_q75",
+      "tcc_mean",
+      "temp"
+    ],
+    "FR_wind_actual": [
+      "tiles",
+      "ws_mean",
+      "ws_q90",
+      "doy_sin",
+      "doy_cos",
+      "hour",
+      "temp"
+    ],
+    "FR_price_actual": [
+      "hour",
+      "weekday",
+      "doy_sin",
+      "doy_cos",
+      "is_holiday",
+      "is_xmas",
+      "is_august",
+      "load",
+      "residual_load",
+      "residual_after_nuclear",
+      "renewable_share",
+      "fuel_cost",
+      "EEX_GAS_PEG",
+      "EEX_CARBON",
+      "EEX_COAL",
+      "FR_availability_nuclear",
+      "FR_availability_hydro",
+      "FR_availability_gas",
+      "FR_availability_coal"
+    ]
+  },
+  "params": {
+    "n_estimators": 800,
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "min_child_weight": 50,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "metrics": {
+    "2023": {
+      "FR_load_actual": 1509.4,
+      "FR_price_actual": 17.8,
+      "FR_solar_actual": 471.0,
+      "FR_wind_actual": 525.3
+    },
+    "2024": {
+      "FR_load_actual": 1074.3,
+      "FR_price_actual": 23.6,
+      "FR_solar_actual": 364.7,
+      "FR_wind_actual": 560.6
+    }
+  }
+}
